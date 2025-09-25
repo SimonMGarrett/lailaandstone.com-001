@@ -1,0 +1,31 @@
+---
+import Logo from './Logo.astro';
+---
+<footer class="footer sm:footer-horizontal bg-gray-900 text-base-content tracking-[1px] py-10 mt-8 px-4 md:px-6 lg:px-8 xl:px-16">
+  <aside>
+    <Logo light={true} />
+    <p>
+      &copy;{(new Date()).getFullYear()}
+    </p>
+  </aside>
+  <nav>
+    <h6 class="footer-title tracking-[2px]">Services</h6>
+    <a href="/services/list#insights" class="link link-hover">Data Insights</a>
+    <a href="/services/list#opportunities" class="link link-hover">Hidden Opportunities</a>
+    <a href="/services/list#threats" class="link link-hover">Lurking Threats</a>
+    <a href="/services/list#ml-ai" class="link link-hover">Safe AI + ML</a>
+    <a href="/services/list#threats" class="link link-hover">Data Compliance</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title tracking-[2px]">Company</h6>
+    <a href="/mission" class="link link-hover">Mission</a>
+    <a href="/about" class="link link-hover">About</a>
+    <a href="/contact" class="link link-hover">Contact</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title tracking-[2px]">Legal</h6>
+    <a href="/legal/terms" class="link link-hover">Terms</a>
+    <a href="/legal/privacy" class="link link-hover">Privacy</a>
+    <a href="/legal/cookies" class="link link-hover">Cookies</a>
+  </nav>
+</footer>

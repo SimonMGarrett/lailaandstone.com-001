@@ -1,0 +1,18 @@
+---
+// "Light" means the LOGO is light.
+const { light } = Astro.props;
+// const color = '#f500b3';
+---
+<div class="outfit-regular tracking-[2px] cursor-pointer" onclick="location.href='/'">
+    {
+        light ? 
+        <div class="text-left">
+            <div class="text-xl text-gray-100 tracking-[4px]">LAILA+STONE</div>
+            <div class="text-gray-100 text-xs opacity-50 pl-[1px]">Insight from your world's data</div>
+        </div>:
+        <div class="text-left pl-3 border-l-[3px] border-[#f500b3]">
+            <div class="text-3xl text-gray-900 tracking-[4.5px]">LAILA+STONE</div>
+            <div class="text-gray-700 text-xs opacity-80 pl-[1px]">Insight from your world's data</div>
+        </div>
+    }
+</div>

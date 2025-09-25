@@ -1,0 +1,11 @@
+---
+import Card from './Card.astro';
+const { text, align } = Astro.props;
+let alignText = ''
+if (align && align === 'center') {
+  alignText = 'text-center';
+}
+---
+<Card widths="w-full" bgs="bg-white"/>
+    <h1 class={"outfit-bold page-header "+alignText}>{text}</h1>
+</Card>

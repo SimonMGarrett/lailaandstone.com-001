@@ -1,0 +1,152 @@
+---
+/**
+ * CornerAlignedGridTW.astro — Tailwind version
+ *
+ * Props:
+ * - images: string[] — exactly 4 image URLs, order: [TL, TR, BL, BR]
+ * - alt?: string[] — optional alt text per image
+ * - scale?: number — image growth beyond its cell (default 1.35)
+ * - gap?: string — CSS length for gap between cells (default '0')
+ * - aspect?: string — aspect-ratio for the whole grid (default '1 / 1')
+ * - radiusClass?: string — Tailwind radius class (default 'rounded-xl')
+ * - shadowClass?: string — Tailwind shadow class (default 'shadow-xl')
+ */
+interface Props {
+  images: string[];
+  alt?: string[];
+  scale?: number;
+  gap?: string;
+  aspect?: string;
+  radiusClass?: string;
+  shadowClass?: string;
+  imgSizing?: string;
+}
+
+const {
+  images = [],
+  alt = ["", "", "", ""],
+  scale = 1,
+  gap = "0",
+  aspect = "1 / 1",
+  radiusClass = "rounded-none",
+  shadowClass = "shadow-md",
+  imgSizing = "max-w-[350px] max-h-[350px]",
+} = Astro.props as Props;
+
+if (images.length !== 4) {
+  throw new Error("CornerAlignedGridTW requires exactly 4 images.");
+}
+---
+
+<div>
+  
+  
+  <!-- Wrapper for W, imgs, E -->
+  <div class="flex justify-center items-center">
+    
+
+    <div class="flex-1 flex flex-col">
+      <!-- TOP TWO -->
+      <div
+        class="relative grid grid-cols-2 grid-rows-1 w-full overflow-visible gap-0"
+      >
+        <!-- Top-left -->
+        <div
+          class="relative flex justify-end items-end overflow-visible group border-b border-r border-gray-200 p-4"
+        >
+          <img
+            src={images[0]}
+            alt={alt[0] ?? ""}
+            loading="lazy"
+            class={`block ${radiusClass} ${shadowClass} ${imgSizing} transition-transform duration-200 ease-out`}
+          />
+        </div>
+
+        <!-- Top-right -->
+        <div
+          class="relative flex justify-start items-end overflow-visible group border-b border-l border-gray-200 p-4"
+        >
+          <img
+            src={images[1]}
+            alt={alt[1] ?? ""}
+            loading="lazy"
+            class={`block ${radiusClass} ${shadowClass} ${imgSizing} transition-transform duration-200 ease-out`}
+          />
+        </div>
+      </div>
+
+      <!-- BOTTOM TWO -->
+      <div
+        class="flex-1 relative grid grid-cols-2 grid-rows-1 w-full overflow-visible gap-0"
+      >
+        <!-- Bottom-left -->
+        <div
+          class="relative flex justify-end items-start overflow-visible group border-t border-r border-gray-200 p-4"
+        >
+          <img
+            src={images[2]}
+            alt={alt[2] ?? ""}
+            loading="lazy"
+            class={`block ${radiusClass} ${shadowClass} ${imgSizing} transition-transform duration-200 ease-out`}
+          />
+        </div>
+
+        <!-- Bottom-right -->
+        <div
+          class="relative flex justify-start items-start overflow-visible group border-t border-l border-gray-200 p-4"
+        >
+          <img
+            src={images[3]}
+            alt={alt[3] ?? ""}
+            loading="lazy"
+            class={`block ${radiusClass} ${shadowClass} ${imgSizing} transition-transform duration-200 ease-out`}
+          />
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+</div>
+
+<style>
+  /* Subtle hover: nudge each image from its anchored corner without breaking alignment */
+  .group:hover > img {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 640px) {
+    :root {
+      --cag-scale-mobile: 0.9;
+    }
+  }
+</style>
+
+<!--
+USAGE
+  ---
+  import CornerAlignedGridTW from "../components/CornerAlignedGridTW.astro";
+  const imgs = [
+    "/images/a.jpg",
+    "/images/b.jpg",
+    "/images/c.jpg",
+    "/images/d.jpg",
+  ];
+  ---
+
+  <CornerAlignedGridTW
+    images={imgs}
+    scale={1.4}
+    gap="0.5rem"   
+    aspect="1 / 1"
+    radiusClass="rounded-2xl"
+    shadowClass="shadow-2xl"
+  />
+
+NOTES
+- `scale=1` fits each image to its cell; >1 expands outward while the inner corner remains centered.
+- Tweak `gap` (e.g., `gap=\"0.5rem\"`) for visible spacing; the center remains flush.
+- Swap `aspect` (e.g., `16 / 9`) to change the outer frame without breaking the alignment trick.
+- Use any Tailwind radius/shadow classes via `radiusClass`/`shadowClass`.
+-->

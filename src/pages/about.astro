@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeading1 from "../components/PageHeading1.astro";
+import laila from "../assets/images/laila-and-stone4.jpg";
+---
+
+<Layout>
+  <img src={laila.src} alt="Laila+Stone" class="block md:hidden" />
+  <div class="flex items-start space-x-6">
+    <div class="lhs sm:w-full md:w-1/2 md:max-w-[700px] lg:mr-16">
+      <PageHeading1 text="About" />
+
+      <p class="lead-para">"What is LAILA+STONE all about?"</p>
+      <p class="mt-4">
+        The simple, honest answer is that it's my side project that I'm running
+        next to my rather nice day job, working on data across UK Gov
+        Departments. LAILA+STONE is my next project, after a career in academia
+        (in Machine Learning, until 2010), then two successful full-time AI/ML
+        consultancies.
+      </p>
+      <p>
+        Since, my day job won't always be around, I'm enjoying playing with
+        this. There is no 'we', there is only me. If you see 'we' in any text,
+        it's merely force of habit. And LAILA+STONE is just two random words,
+        and-ed together.
+      </p>
+      <p class="lead-para mt-8">
+        "But no!" <span class="text-base text-gray-700">I hear you say,</span> "We need a deeper,
+        more emotional 'About' than that! Something that makes us love what you're
+        doing, a triumphant story!"
+      </p>
+      <p>"Oh. Okay then, how about this...</p>
+      <div class="my-8 pl-4 border-l-[3px] border-[#f500b3] italic">
+        <p>
+          <span class="lead-para">The stone came to Laila when she was ten.</span>
+          She saw it on the riverbed — smooth, palm-sized, and streaked with veins
+          of pink. She reached into the cold water and picked it up; it was strangely
+          warm. She kept it close: in her pocket during exams, in her palm during
+          hospital visits, beneath her pillow on nights when the world felt too lonely.
+        </p>
+        <p>
+          People called it silly; it was just a rock. And Laila knew they were
+          right. But it was also more. The stone anchored her through her
+          struggles, her grief, the sting of classrooms where she never quite
+          belonged. When loneliness wrapped around her like cold fog, the stone
+          hummed quietly with something like hope.
+        </p>
+
+        <p>
+          Years passed. Laila reached for scholarships, for a place in the world
+          that would not make space easily. She struggled and tried again.
+          Always, the stone was there — quiet, solid, certain.
+        </p>
+
+        <p>
+          It was the day she stood on a stage, final diploma in hand, the
+          auditorium erupting in applause, when she knew. She slipped her
+          fingers into her pocket. The stone was still warm.
+        </p>
+
+        <p>She lifted it, kissed it, and gently held it out in her hand.</p>
+
+        <p>
+          “I carried this with me,” she said, voice steady, eyes shining. “Not
+          because it had power. But because I did. And I all needed was to
+          remember.”
+        </p>
+
+        <p>She smiled and raise the stone aloft.</p>
+
+        <p>“And with this, I will never forget.”</p>
+      </div>
+
+      <p>
+        Let's be real, though. For us to be here, with our companies, and data,
+        and struggles... and we are the REAL story, we are the real 'Laila',
+        with whatever stone we have that has kept us going.
+      </p>
+
+      <p>
+        So LAILA+STONE is <a href="./services/list" class="underline"
+          >me (Simon) doing what I do well</a
+        >, to help you do what you do well &mdash; Let's <a
+          href="/contact"
+          class="underline italic">talk</a
+        >.
+      </p>
+    </div>
+    <div
+      class="rhs hidden md:block md:mt-16 md:ml-16 md:w-1/2 md:max-w-[700px]"
+    >
+      <img src={laila.src} alt="Laila+Stone" />
+    </div>
+  </div>
+</Layout>

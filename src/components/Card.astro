@@ -1,0 +1,7 @@
+---
+const { widths, bgs} = Astro.props;
+const classes = widths + " " + bgs + " ";
+---
+<div class={"card rounded-none " + classes + ""}>
+  <slot />
+</div>

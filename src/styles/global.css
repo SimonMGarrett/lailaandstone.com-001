@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+h3 {
+  @apply text-lg font-semibold text-gray-600 mt-3 mb-0;
+}
+
+p {
+  @apply text-gray-700 mb-2;
+}
+
+ul {
+  @apply my-4;
+}
+
+li {
+  @apply text-gray-700 mb-1 list-disc ml-4;
+}
+
+a {
+  @apply  hover:text-pink-500 active:bg-gray-300;
+} 
+a.underline {
+  @apply text-pink-950 underline;
+}
+
+h2 {
+  @apply text-2xl font-medium text-gray-900 mt-8 mb-3;
+}
+
+.lead-para {
+  @apply text-xl text-gray-800;
+}
+
+.label-std {
+  @apply block text-sm font-medium text-gray-700 mb-1 w-[200px];
+}
+
+.btn-pink {
+  @apply bg-pink-500 text-white font-bold py-2 px-4 rounded hover:bg-pink-600 border-0;
+}
+
+.outfit-regular{
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.outfit-bold{
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.page-header {
+  @apply text-4xl font-bold text-gray-900 mt-16 mb-8;
+}

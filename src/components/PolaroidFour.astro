@@ -1,0 +1,109 @@
+---
+// File: src/components/PolaroidFour.astro
+interface Polaroid {
+  src: string;
+  alt?: string;
+  caption?: string;
+}
+
+interface Props {
+  img1: Polaroid;
+  img2: Polaroid;
+  img3: Polaroid;
+  img4: Polaroid;
+  offsets?: [[number, number], [number, number], [number, number], [number, number]];
+  /** Override default rotations (deg) for the 4 shots */
+  rotation?: [number, number, number, number];
+  /** CSS size for the polaroids (e.g. "220px", "min(40vw, 260px)") */
+  size?: string;
+  /** Optional sizes attribute passed to <img> for responsive loading */
+  sizes?: string;
+}
+
+const {
+  img1,
+  img2,
+  img3,
+  img4,
+  rotation = [-0,-0,0,0],
+  offsets = [[0,160], [230,300], [400,50], [190,0]],
+  size = "min(40vw, 240px)",
+  sizes = "(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 240px",
+} = Astro.props;
+const imgs = [img1, img2, img3, img4];
+---
+
+<div class="polaroid-wrap h-[620px] relative" role="list">
+  {imgs.map((img, i) => (
+    <figure
+      role="listitem"
+      class="polaroid absolute"
+      style={`--rot: ${rotation[i]}deg; --size: ${size}; left: ${offsets[i][0]}px; top: ${offsets[i][1]}px;`}
+    >
+      <div class="mat">
+        <img
+          src={img.src}
+          alt={img.alt ?? ""}
+          loading="lazy"
+          decoding="async"
+          sizes={sizes}
+        />
+      </div>
+      {/* {img.caption && <figcaption>{img.caption}</figcaption>} */}
+    </figure>
+  ))}
+</div>
+
+<style>
+
+  .polaroid {
+    width: var(--size);
+    max-width: 100%;
+    transform: rotate(var(--rot));
+    transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
+    filter: saturate(0.98) contrast(1.02);
+    will-change: transform, filter;
+    cursor: default;
+    /* subtle drop shadow */
+    box-shadow:
+      0 10px 20px rgba(0,0,0,.18),
+      0 3px 6px rgba(0,0,0,.12);
+    background: #fff;
+    border-radius: 6px; /* gentle corner; keeps a modern feel */
+    user-select: none;
+  }
+
+  /* hover: lift & straighten a bit */
+
+  .mat {
+    /* create the “polaroid” frame with extra bottom */
+    background: #fff;
+    padding: 10px 10px 22px; /* thicker bottom */
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.06);
+  }
+
+  .polaroid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;   /* classic print shape */
+    object-fit: cover;
+    border-radius: 3px;
+    background: #f3f3f3;
+  }
+
+  /* add a hint of “table” shadow below each print */
+  .polaroid::after {
+    content: "";
+    position: absolute;
+    inset: auto 8% -6% 8%;
+    height: 12px;
+    filter: blur(6px);
+    background: radial-gradient(closest-side, rgba(0,0,0,.18), transparent);
+    opacity: 0.7;
+    pointer-events: none;
+    transform: rotate(calc(var(--rot) * -0.2));
+  }
+
+
+</style>
