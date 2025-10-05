@@ -1,6 +1,16 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
+.page-header {
+  @apply text-4xl font-bold text-gray-900 mt-16 mb-8;
+}
+
+h2 {
+  @apply relative text-2xl font-semibold text-slate-800 mt-8 mb-3;
+}
+
+
 h3 {
   @apply text-lg font-semibold text-gray-600 mt-3 mb-0;
 }
@@ -22,10 +32,6 @@ a {
 } 
 a.underline {
   @apply text-pink-950 underline;
-}
-
-h2 {
-  @apply text-2xl font-medium text-gray-900 mt-8 mb-3;
 }
 
 .lead-para {
@@ -52,8 +58,4 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-}
-
-.page-header {
-  @apply text-4xl font-bold text-gray-900 mt-16 mb-8;
 }

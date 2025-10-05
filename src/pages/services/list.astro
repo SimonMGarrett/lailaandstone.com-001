@@ -1,108 +1,146 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PageHeading1 from "../../components/PageHeading1.astro";
+
+import image1 from "../../assets/images/clustering-algorithms-in-Machine-Learning.jpg";
+import image2 from "../../assets/images/threat.png";
+import image3 from "../../assets/images/sheri-silver-uT1oluxMTuo-unsplash.jpg";
+import image4 from "../../assets/images/intelligent-analytical-female-data-scientist-analysing-information_255755-10945.jpg";
+import image5 from "../../assets/images/compliance-crop.jpg";
 ---
 
 <Layout>
   <PageHeading1 text="Services" />
 
-  <div>
-    <h3>Patterns & Insights</h3>
-    <p>
-      Discover Hidden Patterns & Insights. Uncover correlations, clusters, or
-      latent variables in customer behavior, operations, or markets that would
-      be invisible through manual analysis.
-    </p>
+  <div class="block lg:flex mt-24">
+    <div class="w-full lg:w-1/2 mx-4 flex flex-col justify-center">
+      <h2>Insights</h2>
+      <ul class="">
+        <li>
+          <span class="font-semibold">PATTERNS</span> and correlations; clusters,
+          or latent variables in customer behavior &mdash; <strong>
+            discovering operations, or markets that would otherwise be invisible
+          </strong>.
+        </li>
+        <li>
+          <span class="font-semibold">NLP</span> (Natural Language Processing) to
+          mine emails, reports, reviews, or social data for sentiment, intent, named
+          entities, and signals &mdash; <strong
+            >giving voice to messy data</strong
+          >.
+        </li>
+        <li>
+          <span class="font-semibold">IDENTIFY TRENDS &amp; FORECASTS</span>.
+          Use time-series and predictive modeling with confidence to forecast
+          demand, revenue, churn, supply chain disruptions, or market shifts
+          &mdash; <strong>turning past data into foresight</strong>.
+        </li>
+        <li>
+          <span class="font-semibold">HIDDEN OPPORTUNITIES</span>: Surface
+          Strategic Opportunities. Reveal underutilized assets, untapped
+          customer segments, cross-sell potentials, or expansion markets using
+          segmentation, RFM analysis, or entity-linking &mdash; <strong>
+            revealing hidden value
+          </strong>.
+        </li>
+      </ul>
+    </div>
+    <div class="w-full lg:w-1/2 mx-4">
+      <img class="" src={image4.src} alt="" />
+    </div>
+  </div>
+
+  <div class="block lg:flex mt-24">
+    <img class="w-full lg:w-1/2 mx-4" src={image2.src} alt="Online threats" />
+    <div class="w-full lg:w-1/2 mx-4 flex flex-col justify-center">
+      <h2>Threats</h2>
+      <ul class="">
+        <li>
+          <span class="font-semibold">ANOMALIES & RISKS</span>
+          found in your data. Spot fraud, breaches, cybersecurity threats, or operational
+          vulnerabilities using predictive, real-time or retrospective detection
+          techniques (e.g. HMMs, graph analysis).
+        </li>
+        <li>
+          <span class="font-semibold">PROFESSIONAL SECOPS</span> If you're concerned
+          about full-on attacks, as reported that have hit businesses and councils,
+          we can source experts that deal only in that area.
+        </li>
+        <li>
+          <span class="font-semibold">MITIGATION</span> via manual and automated
+          operational OSINT, work backed by professional training.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="block lg:flex mt-24">
+    <div class="w-full lg:w-1/2 mx-4 flex flex-col justify-center">
+      <h2>Enhance Decision-Making with AI</h2>
+      <ul class="">
+        <li>
+          <span class="font-semibold">DECISION TOOLS</span>: Provide AI-assisted
+          decision tools (e.g. scoring models, dashboards, counterfactuals) to
+          improve accuracy and confidence in high-stakes decisions.
+        </li>
+        <li>
+          <span class="font-semibold">AUTOMATION</span>: Build ML-powered
+          workflows for document classification, image/video tagging,
+          intelligent routing, summarisation etc. Reduce cost, free up staff
+          time, and minimise drudgery.
+        </li>
+      </ul>
+    </div>
+    <div class="w-full lg:w-1/2 mx-4">
+      <img class="" src={image1.src} alt="" />
+    </div>
   </div>
 
   <div>
-    <h3>Threats, Anomalies & Risks</h3>
-    <p>
-      Detect Threats, Anomalies & Risks. Spot fraud, compliance breaches,
-      cybersecurity threats, or operational anomalies and vulnerabilities using
-      real-time or retrospective detection techniques (e.g. HMMs, RNNs, graph
-      analysis).
-    </p>
-    <p>
-      You've heard stories of businesses and councils being invaded by
-      attackers? Improve your security.
-    </p>
-    <p>
-      I'm not a DevSecOps operatice, but I can advise, point you at people who
-      are, and be your interpreter.
-    </p>
-    <p>OSINT, threat detection, may course, etc.</p>
+    <div class="block lg:flex mt-24">
+      <img class="w-full lg:w-1/3 mx-4" src={image5.src} alt="" />
+      <div class="w-full lg:w-2/3 mx-4 flex flex-col justify-center">
+        <h2>Compliance & Governance</h2>
+        <ul>
+          <li>
+            <span class="font-semibold">MONITORING FOR BREACHES</span>: Monitor
+            for regulatory breaches, and implement data quality — ensuring data
+            is a safe asset, not a liability.
+          </li>
+          <li>
+            <span class="font-semibold">AUDIT TRAILS</span>: automated audit
+            trails and lineage frameworks.
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <h3>Trends & Forecasts</h3>
-    <p>
-      Identify Trends & Forecasts. Use time-series and predictive modeling with
-      confidence to forecast demand, revenue, churn, supply chain disruptions,
-      or market shifts — turning past data into foresight.
-    </p>
-  </div>
-
-  <div>
-    <h3>Hidden Opportunities</h3>
-    <p>
-      Surface Strategic Opportunities. Reveal underutilized assets, untapped
-      customer segments, cross-sell potentials, or expansion markets using
-      segmentation, RFM analysis, or entity-linking.
-    </p>
-  </div>
-
-  <div>
-    <h3>Automate Repetitive & Manual Processes</h3>
-    <p>
-      Build ML-powered workflows (e.g. document classification, image/video
-      tagging, intelligent routing, summarisation) to reduce cost and free up
-      staff time and minimise drudgery.
-    </p>
-  </div>
-
-  <div>
-    <h3>Enhance Decision-Making with AI</h3>
-    <p>
-      Provide AI-assisted decision tools (e.g. scoring models, dashboards,
-      counterfactuals) to improve accuracy and confidence in high-stakes
-      decisions.
-    </p>
-  </div>
-
-  <div>
-    <h3>Link Data & Build Knowledge Graphs</h3>
-    <p>
-      Integrate scattered records across silos, resolve duplicates, and create
-      rich, queryable maps of people, places, organisations, and their
-      relationships.
-    </p>
-  </div>
-
-  <div>
-    <h3>Strengthen Compliance & Governance</h3>
-    <p>
-      Monitor for regulatory breaches, automate audit trails, and implement data
-      quality and lineage frameworks — ensuring data is a safe asset, not a
-      liability.
-    </p>
-  </div>
-
-  <div>
-    <h3>Turn Unstructured Text into Insights</h3>
-    <p>
-      Use Natural Language Processing (NLP) to mine emails, reports, reviews, or
-      social data for sentiment, intent, named entities, and signals — giving
-      voice to messy data.
-    </p>
-  </div>
-
-  <div>
-    <h3>Build Visual, Intuitive Intelligence Tools</h3>
-    <p>
-      Deliver dashboards, apps, or storyboards (e.g. in NiceGUI, Dash,
-      Streamlit) that empower non-technical users to explore and act on data in
-      real-time.
-    </p>
+  <div class="block lg:flex mt-24">
+    <div class="w-full lg:w-1/2 mx-4 flex flex-col justify-center">
+      <h2>Intuitive, Visual Tools</h2>
+      <ul class="">
+        <li>
+          <span class="font-semibold">DASHBOARDS</span>: Deliver dashboards,
+          apps, or storyboards that empower non-technical users, allowing them
+          to explore and act on complex data in real-time.
+        </li>
+        <li>
+          <span class="font-semibold">KNOWLEDGE GRAPHS</span>: Integrate
+          scattered records across silos, resolve duplicates, and create rich,
+          queryable maps of people, places, organisations, and their
+          relationships.
+        </li>
+        <li>
+          <span class="font-semibold">CAKE</span>:Why the picture of cake? Cake
+          is nice, that's why.<br /><br />Also, our dashboards are 100% bespoke,
+          so yours will be fitted to your wants and needs, and an image would be
+          misleading.<br /><br />Cake is rarely misleading.
+        </li>
+      </ul>
+    </div>
+    <div class="w-full lg:w-1/2 mx-4">
+      <img class="" src={image3.src} alt="" />
+    </div>
   </div>
 </Layout>

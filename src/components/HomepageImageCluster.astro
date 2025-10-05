@@ -1,0 +1,52 @@
+---
+import imageExcel from "../assets/images/excel.webp";
+import imageDB from "../assets/images/db-tables.png";
+import imageProcessing from "../assets/images/processing.png";
+import imageDashboard from "../assets/images/dashboard.jpg";
+---
+
+<div class="bg-gray-900 py-8">
+  <h1 class={"outfit text-center text-white text-4xl font-extrabold mt-4 mb-8"}>
+    Your data. New insight
+  </h1>
+  <div class="flex flex-col lg:flex-row justify-center items-center px-4">
+    <div
+      class="lhs min-w-[360px] max-w-[500px] bg-gray-100"
+    >
+      <img src={imageExcel.src} alt="Excel data" class="mb-4" />
+      <img src={imageDB.src} alt="Database tables" class="" />
+      <p class="text-center font-bold text-xl">Messy data</p>
+    </div>
+
+    <div class="bg-white mx-4 my-4">
+      <img
+        src={imageProcessing.src}
+        alt="Data processing"
+        class="mx-8 mt-4 mb-1 max-w-[80px]"
+      />
+      <p class="text-center font-bold text-xl !mb-1 pb-0">What we do</p>
+      <ul class="relative left-[20px] text-sm !mt-0 pt-0">
+        <li>Understand</li>
+        <li>Build</li>
+        <li>Deploy</li>
+      </ul>
+    </div>
+
+    <div
+      class="rhs min-w-[360px] max-w-[600px] p-2 bg-white"
+    >
+      <img
+        src={imageDashboard.src}
+        alt="Actionable information in a dashboard"
+      />
+      <p class="text-center font-bold text-xl mt-2">Actionable Insight</p>
+    </div>
+  </div>
+  <div class="justify-center flex mt-12 mb-4">
+    <a
+      href="/services/list"
+      class="btn btn-lg btn-wide bg-[#f500b3] border-[#f500b3] hover:!text-gray-200 cursor-pointer"
+      >Learn more</a
+    >
+  </div>
+</div>

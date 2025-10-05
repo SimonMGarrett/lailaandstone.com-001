@@ -1,7 +1,8 @@
 - [x] Add ICONS to sidebar menu.
 - [ ] Add dark mode toggle?
-- [ ] Test the Contact page works live (may need to change the domain in Form and certainly need to do sometibng about the submit URL which currently does not exist.)
-- [ ] Install the `Outfit` font and check it loads nicely, not jankily
+- [ ] Test the Contact page works live (may need to change the domain in Form and certainly need to do something about the submit URL which currently does not exist.)
+- [ ] Check the `Outfit` font loads nicely, not jankily, where the font is not installed on the device.
 - [ ] Do the legal pages, and something that states I'm not giving advise on sec or anything else outside my domain.
 - [ ] Ensure all pages have two- or three-pane layouts
-- [ ] Why does the slider menu have a gap at the top now?
+- [ ] The homepage images should visually take the user from a mass of data to something more refined, to something actionable. So, maybe a dashboard at the end?
+- [ ] The existing images should be used elsewhere, perhaps in MISSION.
