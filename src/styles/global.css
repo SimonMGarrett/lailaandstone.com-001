@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+body {
+  inline-size: 100%;
+}
 
 .page-header {
   @apply text-4xl font-bold text-gray-900 mt-16 mb-8;
