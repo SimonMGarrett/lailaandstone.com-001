@@ -1,27 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import PageHeading1 from '../components/PageHeading1.astro';
+import PageHeading1 from "../components/PageHeading1.astro";
 ---
 
 <Layout>
   <PageHeading1 text="Contact" />
   <p>This is the Contact page.</p>
   <p>
-    Wherever you are in the world, we would love to hear from you. Please reach out using the contact form below.
+    Wherever you are in the world, we would love to hear from you. Please reach
+    out using the contact form below.
   </p>
-
 
   <div class="form pt-4 pb-8 mt-0">
     <form
       class="rounded border border-gray-50 shadow p-8 bg-white"
+      action="https://formsubmit.co/simonmjgarrett@gmail.com"
       method="POST"
-      data-botpoison-public-key="pk_d5874961-8320-4e90-9a41-ee7cd3e700d7"
     >
       <div class="form-control mb-4">
-        <label for="name" class="label label-std ">
-          <span class="label-text text-gray-700 font-semibold">
-            Name
-          </span>
+        <label for="name" class="label label-std">
+          <span class="label-text text-gray-700 font-semibold"> Name </span>
         </label>
         <input
           class="input dark:bg-white dark:border-gray-300 text-gray-600 w-full max-w-xs"
@@ -30,10 +28,11 @@ import PageHeading1 from '../components/PageHeading1.astro';
           name="name"
           placeholder="Name"
           required={true}
+          type="email" name="email"
         />
       </div>
       <div class="form-control mb-4">
-        <label for="email" class="label label-std ">
+        <label for="email" class="label label-std">
           <span class="label-text text-gray-700 font-semibold">
             Email (so I can reply to you)
           </span>
@@ -45,24 +44,23 @@ import PageHeading1 from '../components/PageHeading1.astro';
           name="email"
           placeholder="Email"
           required={true}
+          type="email" name="email"
         />
       </div>
       <div class="form-control mb-4">
-        <label for="message" class="label label-std ">
-          <span class="label-text text-gray-700 font-semibold">
-            Message
-          </span>
+        <label for="message" class="label label-std">
+          <span class="label-text text-gray-700 font-semibold"> Message </span>
         </label>
         <textarea
           class="input dark:bg-white dark:border-gray-300 text-gray-600 w-full max-w-xs h-32"
           id="message"
           name="message"
           placeholder="Message"
-        ></textarea>
+          type="email" name="email"
+        >
+        </textarea>
       </div>
-      <button class="btn btn-pink" type="submit">
-        Send
-      </button>
+      <button class="btn btn-pink" type="submit"> Send </button>
     </form>
   </div>
 </Layout>
