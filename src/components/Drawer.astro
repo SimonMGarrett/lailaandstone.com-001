@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { Logo, HeaderBar, FooterBar } = Astro.props;
+---
+
+<!-- Drawer should wrap the content that includes the trigger -->
+<div class="drawer drawer-end">
+  <!-- Toggle checkbox -->
+  <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+
+  <!-- Content -->
+  <div class="drawer-content">
+    <div class="navbar bg-white m-0 p-0">
+      <div class="flex-1">
+        <Logo />
+      </div>
+
+      <div class="flex-none mr-0 pr-0">
+        <!-- This label opens the drawer -->
+        <label for="my-drawer-4" class="drawer-button btn btn-square btn-ghost hover:bg-gray-300 active:bg-gray-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-8 w-8 stroke-gray-500">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3) the side panel -->
+  <div class="drawer-side">
+    <!-- 4) the overlay MUST be a sibling before your panel content -->
+    <label for="my-drawer-4" class="drawer-overlay"></label>
+
+    <ul class="menu bg-white text-gray-900 min-h-full w-80 p-4 !mt-0 text-xl shadow-md border-l border-gray-100">
+      <!-- Put an explicit close button INSIDE the panel, separate from the overlay -->
+      <li class="mb-6">
+        <label for="my-drawer-4" class="cursor-pointer text-right block">X Close</label>
+      </li>
+
+      <!-- Sidebar content -->
+      <li><a href="/"><Icon class="inline-block" name="home" /> Home</a></li>
+      <li><a href="/services/list"><Icon class="inline-block" name="concierge" /> Services</a></li>
+      <li><a href="/mission"><Icon class="inline-block" name="rocket" /> Mission</a></li>
+      <li><a href="/about"><Icon class="inline-block" name="about" /> About</a></li>
+      <li><a href="/contact"><Icon class="inline-block" name="envelope" /> Contact</a></li>
+    </ul>
+  </div>
+</div>
