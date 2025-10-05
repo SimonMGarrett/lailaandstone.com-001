@@ -29,13 +29,13 @@ import DrawerSide from "../components/DrawerSide.astro";
     class="outfit-regular flex flex-col min-h-screen bg-white text-gray-800 m-0 p-0"
   >
     <div
-      class="layout-main w-full flex-1 bg-white"
+      class="layout-main w-full flex-1 bg-white !m-0 !p-0"
     >
-      <div class="drawer drawer-end">
-        <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+      <div class="drawer drawer-end m-0 p-0">
+        <input id="my-drawer-4" type="checkbox" class="drawer-toggle !m-0 !p-0" />
 
-        <div class="drawer-content">
-          <div class="my-8 px-4 md:px-6 lg:px-8 xl:px-16">
+        <div class="drawer-content !m-0 !p-0">
+          <div class="head-and-content my-8 px-6 lg:px-8 xl:px-16">
             <HeaderBar />
             <slot />
           </div>
