@@ -31,7 +31,7 @@ a {
   @apply  hover:text-pink-500 active:bg-gray-300;
 } 
 a.underline {
-  @apply text-pink-950 underline;
+  @apply text-gray-800 underline font-semibold;
 }
 
 .lead-para {
