@@ -4,15 +4,15 @@ import Card from "../components/Card.astro";
 import HomepageLayout from "../layouts/HomepageLayout.astro";
 import HomepageImageCluster from "../components/HomepageImageCluster.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const date = new Date();
+const threeLetterMonth = date.toLocaleString('en-US', { month: 'short' });
 ---
 
 <HomepageLayout>
   <Card widths="w-full ">
     <HomepageImageCluster />
     
-    <div class="text-center mt-8">Your chance to get one of our three Oct 2025 contracts: <a class="btn btn-outline ml-1" href="/contact">Start a chat.</a></div>
+    <div class="text-center mt-8">Your chance to get one of our three ${threeLetterMonth} 2025 contracts: <a class="btn btn-outline ml-1" href="/contact">Start a chat.</a></div>
   </Card>
   <!-- <Carousel /> -->
 </HomepageLayout>
